@@ -8,10 +8,6 @@ export const getAll = async ({
   offset = 0,
   descending = false
 }) => {
-  if (limit > 30) {
-    throw new Error('The limit filter must be less or equal than 30')
-  }
-
   return Product
     .find({
       $or: [
